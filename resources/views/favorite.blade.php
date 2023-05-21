@@ -1,0 +1,1 @@
+<h1>Halaman favorite</h1>
