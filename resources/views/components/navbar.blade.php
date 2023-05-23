@@ -1,48 +1,84 @@
 <nav>
-    <ul>
-        <li>
-            <a href="#">
-                <i class="fa-solid fa-user"></i>
-                <span class="nav-item">account</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <span  class="nav-item">Search</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa-solid fa-house"></i>
-                <span  class="nav-item">Home</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa-solid fa-heart"></i>
-                <span class="nav-item">Favorite</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="nav-item">MyBag</span>
-            </a>
-        </li>
-       <div class="bottom-menu">
-            <li>
-                <a href="#" class="bellow">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <span class="nav-item">About us</span>
-                </a>
-                </li>
-            <li>
-                <a href="#" class="bellow">
+        <div class="nav-logo">
+            <span>
+                <img src="assets/Logobar.png" alt="logo-pakuan-eaton" class="logo-image">
+            </span>
+            <i class="fa-solid fa-angles-right" id="btn"></i>
+        </div>
+
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#">
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-magnifying-glass" id="navsrch"></i>  
+                    </span>
+                    <span class="nav-text">
+                        Search 
+                    </span>
+                </a></li>
+                <li><a href="#">
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-house"></i> 
+                    </span>
+                    <span class="nav-text">
+                        Dashboard
+                    </span>
+                </a></li>
+                <li><a href="#">
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                    <span class="nav-text">
+                        Favorit
+                    </span>
+                </a></li>
+                <li><a href="#">
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </span>
+                    <span class="nav-text">
+                        My Bag
+                    </span>
+                </a></li>
+
+            </ul>
+        </div>
+
+        <div class="nav-bottom">
+           <ul>
+                <li><a href="#">
+                    <span class="nav-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <span class="nav-text">
+                        My Account
+                    </span>
+                </a></li>
+                <li><a href="#">
+                    <span class="nav-icon">
+                        <i class="fa-sharp fa-solid fa-circle-info"></i>
+                    </span>
+                    <span class="nav-text">
+                        About Us
+                    </span>
+                </a></li>
+                <li><a href="#">
+                    <span class="nav-icon">
                         <i class="fa-solid fa-right-from-bracket"></i>
-                        <span class="nav-item">Log out</span>
-                </a>
-            </li>
-       </div>
-    </ul>
-</nav>
+                    </span>
+                    <span class="nav-text">
+                        Log Out
+                    </span>
+                </a></li>
+                
+           </ul>
+        </div>
+     </nav>
+
+     <div class="main-content">
+        <div class="container">
+            <h1>Halaman Konten</h1>
+        </div>
+     </div>
+
+     <script src="script.js"></script>
