@@ -8,17 +8,17 @@
 
         <div class="nav-menu">
             <ul>
-                <li><a href="#">
+                <li><a href="/test">
                     <span class="nav-icon">
-                        <i class="fa-solid fa-magnifying-glass" id="navsrch"></i>  
+                        <i class="fa-solid fa-magnifying-glass" id="navsrch"></i>
                     </span>
                     <span class="nav-text">
-                        Search 
+                        Search
                     </span>
                 </a></li>
                 <li><a href="#">
                     <span class="nav-icon">
-                        <i class="fa-solid fa-house"></i> 
+                        <i class="fa-solid fa-house"></i>
                     </span>
                     <span class="nav-text">
                         Dashboard
@@ -74,11 +74,3 @@
            </ul>
         </div>
      </nav>
-
-     <div class="main-content">
-        <div class="container">
-            <h1>Halaman Konten</h1>
-        </div>
-     </div>
-
-     <script src="script.js"></script>

@@ -9,7 +9,7 @@
 
 /* Navbar Decoration */
 nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #dfe9f5;
@@ -121,6 +121,129 @@ nav .nav-text{
 nav.active .nav-text{
     display: flex;
     transition: all 0.9s ease;
+}
+
+/* Product Card Design */
+.productpage-container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 2rem;
+}
+
+.productpage-container .title-productpage{
+    font-size: 1.5rem;
+    color:#444;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap:2rem;
+}
+
+.product-card{
+    position: relative;
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    padding: 0.8rem;
+    background: #dfe9f5;
+    cursor: pointer;
+}
+
+.product-card:hover{
+    background: #F5DFF2;
+}
+
+.product-card img{
+    width: 225px;
+}
+
+.card-text h3{
+    padding-top: 0.4rem;
+    font-size: 1.5rem;
+}
+
+.card-text p{
+    text-align: justify;
+    font-size: 0.85rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.8rem;
+}
+
+.card-pricerate{
+    display: flex;
+    /* background: #493f5a; */
+}
+
+.card-pricerate .price{
+    font-weight: bold;
+    border-radius: 2rem;
+    background: #fff;
+    width: calc(100% - 25% - 5%);
+    margin-right: 5%;
+}
+
+.card-pricerate .rate{
+    border-radius: 2rem;
+    background: #fff;
+    width: 25%;
+}
+
+.card-pricerate .rate i{
+    transition: all 0.5s ease;
+}
+
+.card-pricerate .rate i:hover{
+    transition: all 0.5s ease;
+    transform: rotate(90deg);
+}
+
+.card-transaction{
+    margin-top: 0.6rem;
+    display: flex;
+}
+
+.card-transaction .order{
+    font-weight: bold;
+    border-radius: 0.5rem;
+    background: #fff;
+    width: calc(100% - 30%);
+    height: calc(100% - 30%);
+    margin-right: 3%;
+    font-size: 1.5rem;
+}
+
+.card-transaction .order:hover{
+    background: #2b2538;
+    color: #fff;
+}
+
+.card-transaction .card-wa{
+    margin-right: 3%;
+}
+
+.card-transaction .card-wa i{
+    transition: all 0.3s ease;
+    font-size: 2rem;
+ }
+
+.card-transaction .card-bag i{
+    transition: all 0.3s ease;
+    font-size: 2rem;
+ }
+
+.card-transaction .card-wa i:hover{
+    transition: all 0.3s ease;
+    font-size: 2.4rem;
+ }
+
+.card-transaction .card-bag i:hover{
+    transition: all 0.3s ease;
+    font-size: 2.4rem;
 }
 
 .main-content{
