@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-/* Navbar Decoration */
+/* mynavbar Decoration */
 nav {
     position: fixed;
     top: 0;
@@ -19,7 +19,7 @@ nav {
     transition: all 0.5s ease;
 }
 
-nav.active ~ .main-content {
+nav.active~.main-content {
     left: 250px;
     width: calc(100% - 250px);
 }
@@ -31,8 +31,8 @@ nav.active {
 nav #btn {
     position: absolute;
     color: #493f5a;
-    top : .7rem;
-    left : 50%;
+    top: .7rem;
+    left: 50%;
     font-size: 1.2rem;
     line-height: 50px;
     transform: translateX(-50%);
@@ -41,35 +41,38 @@ nav #btn {
 
 nav.active #btn {
     color: #907fb2;
-    left: 90%;
+    left: 85%;
+    transform: rotate(180deg);
+    transition: all 0.5 ease;
 }
 
-.nav-logo{
+.nav-logo {
     margin-top: .4rem;
     border-radius: 2vh;
     margin-bottom: 2rem;
+    align-items: center;
 }
 
-.nav-logo:hover{
+.nav-logo:hover {
     background-color: #f0f6fa;
 }
 
-.logo-image{
-    margin-top : .4rem;
+.logo-image {
+    margin: .4rem auto;
     width: 200px;
 }
 
-nav .logo-image{
+nav .logo-image {
     transition: all 0.2s ease;
     opacity: 0;
 }
 
-nav.active .logo-image{
+nav.active .logo-image {
     transition: all 0.7s ease;
     opacity: 1;
 }
 
-nav.active .nav-logo{
+nav.active .nav-logo {
     transition: all 0.7s ease;
     width: calc(100% + 5px);
 }
@@ -78,7 +81,11 @@ nav.active .nav-logo{
     font-size: 20px;
 }
 
-nav ul li{
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
     position: relative;
     list-style-type: none;
     height: 50px;
@@ -100,51 +107,82 @@ nav ul li a {
     bottom: 0;
 } */
 
-nav ul li:hover{
+nav ul li:hover {
     background-color: #f0f6fa;
     border-radius: 9px;
 }
 
-nav ul li i{
+nav ul li i {
     min-width: 50px;
     text-align: center;
     border-radius: 12px;
     line-height: 50px;
 }
 
-nav .nav-text{
+nav .nav-text {
     font-size: 17px;
     display: none;
     transition: all 2s ease;
 }
 
-nav.active .nav-text{
+nav.active .nav-text {
     display: flex;
     transition: all 0.9s ease;
 }
 
-/* Product Card Design */
-.productpage-container{
-    max-width: 1200px;
-    margin:0 auto;
-    padding:3rem 2rem;
+/* Main Content */
+.main-content {
+    position: relative;
+    background-color: #fff;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px)
 }
 
-.productpage-container .title-productpage{
+/* Product Card Design */
+.productpage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.productpage-container .title-productpage {
     font-size: 1.5rem;
-    color:#444;
+    color: #444;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     text-align: left;
 }
 
-.product-container{
+.product-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap:2rem;
+    gap: 2rem;
 }
 
-.product-card{
+.dashboardcard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 2fr));
+    column-gap: 7rem;
+    row-gap: 3.5rem;
+    justify-items: center;
+}
+
+#db-color{
+    border-radius: 0.2rem;
+    background: #FFFBD9;
+}
+#db-color:hover{
+    box-shadow: inset 0 0 0.3rem #907cbc;
+}
+
+.dashboard-card{
+    padding: 1rem 1rem 0 1rem;
+}
+
+.product-card {
     position: relative;
     width: 250px;
     height: 100%;
@@ -154,32 +192,34 @@ nav.active .nav-text{
     cursor: pointer;
 }
 
-.product-card:hover{
+.product-card:hover {
     background: #F5DFF2;
+    outline: .2rem solid #222;
+    border-radius: .2rem;
 }
 
-.product-card img{
+.product-card img {
     width: 225px;
 }
 
-.card-text h3{
-    padding-top: 0.4rem;
+.card-text h3 {
+    padding-top: 0.8rem;
     font-size: 1.5rem;
+    font-weight: bolder;
 }
 
-.card-text p{
+.card-text p {
     text-align: justify;
     font-size: 0.85rem;
-    padding-top: 0.4rem;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
 }
 
-.card-pricerate{
+.card-pricerate {
     display: flex;
     /* background: #493f5a; */
 }
 
-.card-pricerate .price{
+.card-pricerate .price {
     font-weight: bold;
     border-radius: 2rem;
     background: #fff;
@@ -187,27 +227,27 @@ nav.active .nav-text{
     margin-right: 5%;
 }
 
-.card-pricerate .rate{
+.card-pricerate .rate {
     border-radius: 2rem;
     background: #fff;
     width: 25%;
 }
 
-.card-pricerate .rate i{
+.card-pricerate .rate i {
     transition: all 0.5s ease;
 }
 
-.card-pricerate .rate i:hover{
+.card-pricerate .rate i:hover {
     transition: all 0.5s ease;
     transform: rotate(90deg);
 }
 
-.card-transaction{
+.card-transaction {
     margin-top: 0.6rem;
     display: flex;
 }
 
-.card-transaction .order{
+.card-transaction .order {
     font-weight: bold;
     border-radius: 0.5rem;
     background: #fff;
@@ -217,42 +257,154 @@ nav.active .nav-text{
     font-size: 1.5rem;
 }
 
-.card-transaction .order:hover{
+.card-transaction .order:hover {
     background: #2b2538;
     color: #fff;
 }
 
-.card-transaction .card-wa{
+.card-transaction .card-wa {
     margin-right: 3%;
 }
 
-.card-transaction .card-wa i{
+.card-transaction .card-wa i {
     transition: all 0.3s ease;
     font-size: 2rem;
- }
+}
 
-.card-transaction .card-bag i{
+.card-transaction .card-bag i {
     transition: all 0.3s ease;
     font-size: 2rem;
- }
+}
 
-.card-transaction .card-wa i:hover{
-    transition: all 0.3s ease;
-    font-size: 2.4rem;
- }
-
-.card-transaction .card-bag i:hover{
+.card-transaction .card-wa i:hover {
     transition: all 0.3s ease;
     font-size: 2.4rem;
 }
 
-.main-content{
+.card-transaction .card-bag i:hover {
+    transition: all 0.3s ease;
+    font-size: 2.4rem;
+}
+
+/* SeacrhBar Decoration */
+.search-bar {
     position: relative;
-    background-color: #fff;
-    min-height: 100vh;
-    top: 0;
-    left: 80px;
-    transition: all 0.5s ease;
-    width: calc(100% - 80px);
+    display: flex;
+    height: 4rem;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    border-radius: 0.4rem;
+    background: #f0ecec;
+}
+
+.search-bar i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    font-size: 2rem;
+    color: #2e2d2d;
+}
+
+.search-bar input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    border: none;
+    padding: 0 1rem 0 3.7rem;
+    background-color: transparent;
+}
+
+::placeholder {
+    font-size: 1.4rem;
+}
+
+/* Login and Register */
+.login-container{
+    display: block;
+    padding: 0.5rem;
+}
+
+.input-container{
+    margin-bottom: 0.5rem;
+}
+
+.login-container label{
+    padding-left: 0.4rem;
+    display: flex;
+}
+
+.login-container input {
+    background: #f0ecec;
+    display: flex;
     padding: 1rem;
+    width: 100%;
+    margin: 0.2rem 0rem;
+    height: 2.3rem;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+}
+
+.forgot-pw{
+    text-align: right;
+    margin: 0.5rem auto;
+    font-size: 0.8rem;
+}
+
+.forgot-pw a:hover, .havent-account a:hover{
+    color: #483e5e;
+}
+
+.login-container button{
+    width: 100%;
+    background-color: #907cbc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 2.5rem;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.login-container button:hover{
+    background-color: #655784;
+    color: #fff;
+}
+
+.havent-account{
+    text-align: center;
+    margin: 0.5rem auto;
+    font-size: 0.8rem;
+}
+
+.for-login{
+    margin-top: 0.5rem;
+}
+
+.for-signup{
+    margin-top: 1.2rem;
+}
+
+/* Header Login */
+.header-login{
+    height: 3.3rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #b8a4fc;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fcf6c3;
+}
+
+.header-login img{
+    margin-left: 0.5rem;
+    background-color:#655784;
+    border-radius: 40px;
+    height: 2rem;
 }

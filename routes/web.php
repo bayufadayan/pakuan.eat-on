@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('/test', function () {
-    return view('testingpage');
+Route::get('/searchpage', function () {
+    return view('searchpage');
+});
+
+Route::get('/login', function () {
+    return view('login');
 });

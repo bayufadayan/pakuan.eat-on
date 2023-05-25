@@ -3,35 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login | Pakuan Eat On</title>
+    <title>Pakuan Eat On | Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        @include('components.headerfirst')
-    </header>
-
-    <section>
-        <h1>Welcome Back</h1>
-        <p>Login now to continue</p>
-    </section>
-
-    <section>
-        <div class="full-login">
-            @include('components.loginillust')
-            @include('components.loginform')
-        </div>
-    </section>
-
-    <section>
-        <a href="#"><button>
-                About Us</button></a>
-    </section>
+    @include('components.navbar')
+    <div class="main-content">
+       @include('components.searchbar')
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
