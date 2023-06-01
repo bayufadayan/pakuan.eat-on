@@ -1,7 +1,7 @@
 @extends('layouts.mainlayout')
 
 @section('title-mainpage')
-    <i class="fa-solid fa-heart"></i> Makanan yang disukai
+    <i class="fa-solid fa-utensils"></i> Aneka Makanan
 @endsection
 
 @section('card-appearance')
