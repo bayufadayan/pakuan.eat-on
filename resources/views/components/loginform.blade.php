@@ -14,11 +14,11 @@
             <a href="#">Forgot Password?</a>
         </div>
 
-        <button type="submit" class="for-login">Log in</button>
+        <button type="submit" class="login-button">Log in</button>
     </form>
 
     <div class="havent-account">
         Don't have account?
-        <a href="#">Sign Up</a>
+        <a href="/signup">Sign Up</a>
     </div>
 </div>

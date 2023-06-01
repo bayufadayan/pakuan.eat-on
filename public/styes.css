@@ -7,7 +7,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* mynavbar Decoration */
+/***************** navbar Decoration *****************/
 nav {
     position: fixed;
     top: 0;
@@ -130,7 +130,7 @@ nav.active .nav-text {
     transition: all 0.9s ease;
 }
 
-/* Main Content */
+/***************** Main Content *****************/
 .main-content {
     position: relative;
     background-color: #fff;
@@ -141,7 +141,7 @@ nav.active .nav-text {
     width: calc(100% - 80px)
 }
 
-/* Product Card Design */
+/***************** Product Card Design *****************/
 .productpage-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -170,15 +170,16 @@ nav.active .nav-text {
     justify-items: center;
 }
 
-#db-color{
+#db-color {
     border-radius: 0.2rem;
     background: #FFFBD9;
 }
-#db-color:hover{
+
+#db-color:hover {
     box-shadow: inset 0 0 0.3rem #907cbc;
 }
 
-.dashboard-card{
+.dashboard-card {
     padding: 1rem 1rem 0 1rem;
 }
 
@@ -200,6 +201,10 @@ nav.active .nav-text {
 
 .product-card img {
     width: 225px;
+}
+.dash-card-link {
+    text-decoration: none;
+    color: black;
 }
 
 .card-text h3 {
@@ -286,7 +291,7 @@ nav.active .nav-text {
     font-size: 2.4rem;
 }
 
-/* SeacrhBar Decoration */
+/***************** SeacrhBar Decoration *****************/
 .search-bar {
     position: relative;
     display: flex;
@@ -297,7 +302,7 @@ nav.active .nav-text {
     background: #f0ecec;
 }
 
-.search-bar i{
+.search-bar i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -321,17 +326,17 @@ nav.active .nav-text {
     font-size: 1.4rem;
 }
 
-/* Login and Register */
-.login-container{
+/***************** Login and Register *****************/
+.login-container {
     display: block;
     padding: 0.5rem;
 }
 
-.input-container{
+.input-container {
     margin-bottom: 0.5rem;
 }
 
-.login-container label{
+.login-container label {
     padding-left: 0.4rem;
     display: flex;
 }
@@ -342,58 +347,68 @@ nav.active .nav-text {
     padding: 1rem;
     width: 100%;
     margin: 0.2rem 0rem;
-    height: 2.3rem;
+    height: 3rem;
     border-radius: 7px;
     border: none;
     outline: none;
 }
 
-.forgot-pw{
+.forgot-pw {
     text-align: right;
     margin: 0.5rem auto;
     font-size: 0.8rem;
 }
 
-.forgot-pw a:hover, .havent-account a:hover{
+.forgot-pw a:hover,
+.havent-account a:hover {
     color: #483e5e;
 }
 
-.login-container button{
+.login-container button {
     width: 100%;
     background-color: #907cbc;
     color: #fff;
     border: none;
     border-radius: 5px;
-    height: 2.5rem;
+    height: 3rem;
     font-weight: bolder;
     font-size: large;
 }
 
-.login-container button:hover{
+.login-container button:hover {
     background-color: #655784;
     color: #fff;
 }
 
-.havent-account{
+.havent-account {
     text-align: center;
     margin: 0.5rem auto;
     font-size: 0.8rem;
 }
 
-.for-login{
+.login-button {
     margin-top: 0.5rem;
 }
 
-.for-signup{
+.signup-button {
     margin-top: 1.2rem;
 }
 
-/* Header Login */
-.header-login{
-    height: 3.3rem;
-    position: absolute;
+.eye {
+    padding-left: 0.5rem;
+}
+
+#eye-hide1 {
+    display: none;
+}
+
+
+/***************** Header Login *****************/
+.header-login {
+    position: relative;
     display: flex;
     justify-content: center;
+    height: 3.3rem;
     width: 100%;
     background-color: #b8a4fc;
     align-items: center;
@@ -402,9 +417,105 @@ nav.active .nav-text {
     color: #fcf6c3;
 }
 
-.header-login img{
+.header-login img {
     margin-left: 0.5rem;
-    background-color:#655784;
+    background-color: #655784;
     border-radius: 40px;
     height: 2rem;
 }
+
+/***************** Login Layout *****************/
+
+.login-text {
+    position: relative;
+    margin-top: 1.75%;
+    margin-left: 5%;
+}
+
+.login-text h1 {
+    font-weight: bold;  
+    margin: 0;
+}
+
+.login-text p {
+    color: #66757F;
+}
+
+.login-text #signup-text1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+.login-text #signup-text2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.login-mainsection {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+
+}
+
+.login-illust {
+    width: 80%;
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    padding-left: 5rem;
+}
+
+.illust-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.illust-container img {
+    position: relative;
+    display: flex;
+    width: 80%;
+}
+
+.login-form {
+    width: 70%;
+    margin-right: 10%;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.login-aboutus {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+}
+
+.login-aboutus button {
+    border-radius: 0.4rem;
+    width: 7rem;
+    height: 2rem;
+    border: none;
+    background-color: #B2A4FF;
+}
+.login-aboutus button:hover {
+    background-color: #907cbc;
+    color: #fff;
+}
+
+/* Uk. Hp */
+@media only screen and (max-width: 915px) {
+
+    /* **************Login Layout************** */
+    .login-illust {
+        display: none;
+    }
+    .login-form {
+        width: 90%;
+        margin-right: 0;
+        justify-content: center;
+    }
+}
+
+/* Uk. Tablet */

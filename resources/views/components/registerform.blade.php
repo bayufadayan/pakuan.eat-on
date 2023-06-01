@@ -20,11 +20,11 @@
             <input type="password" id="pw-conf-input">
         </div>
 
-        <button type="submit" class="for-signup">Sign Up</button>
+        <button type="submit" class="signup-button">Sign Up</button>
     </form>
 
     <div class="havent-account">
         Already have account?
-        <a href="#">Log in</a>
+        <a href="/login">Log in</a>
     </div>
 </div>

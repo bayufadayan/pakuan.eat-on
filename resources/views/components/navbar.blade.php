@@ -24,7 +24,7 @@
                         Dashboard
                     </span>
                 </a></li>
-            <li><a href="#">
+            <li><a href="/favorite">
                     <span class="nav-icon">
                         <i class="fa-solid fa-heart"></i>
                     </span>

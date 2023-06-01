@@ -24,3 +24,36 @@ Route::get('/searchpage', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/signup', function () {
+    return view('signup');
+});
+
+Route::get('/terlaris', function () {
+    return view('product-terlaris');
+});
+
+Route::get('/fastfood', function () {
+    return view('product-fastfood');
+});
+
+Route::get('/hematdompet', function () {
+    return view('product-hematdompet');
+});
+
+Route::get('/minuman', function () {
+    return view('product-minuman');
+});
+
+Route::get('/snack', function () {
+    return view('product-snack');
+});
+
+Route::get('/makanan', function () {
+    return view('product-makanan');
+});
+
+Route::get('/favorite', function () {
+    return view('favorite');
+});
+
