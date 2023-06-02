@@ -20,7 +20,7 @@
             <i class="fa-brands fa-whatsapp"></i>
         </div>
         <div class="card-bag">
-            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
         </div>
     </div>
 </div>

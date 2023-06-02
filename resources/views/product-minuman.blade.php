@@ -1,7 +1,7 @@
 @extends('layouts.mainlayout')
 
 @section('title-mainpage')
-    <i class="fa-solid fa-mug-hot"></i> Aneka Minuman
+    <i class="fa-solid fa-mug-saucer"></i> Aneka Minuman
 @endsection
 
 @section('card-appearance')

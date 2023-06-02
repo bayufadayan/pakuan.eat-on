@@ -34,10 +34,10 @@
                 </a></li>
             <li><a href="#">
                     <span class="nav-icon">
-                        <i class="fa-solid fa-bag-shopping"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
                     </span>
                     <span class="nav-text">
-                        My Bag
+                        Cart
                     </span>
                 </a></li>
 
