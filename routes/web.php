@@ -57,3 +57,6 @@ Route::get('/favorite', function () {
     return view('favorite');
 });
 
+Route::get('/cart', function () {
+    return view('cart');
+});
