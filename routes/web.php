@@ -60,3 +60,6 @@ Route::get('/favorite', function () {
 Route::get('/cart', function () {
     return view('cart');
 });
+Route::get('/confirm', function () {
+    return view('confirmorder');
+});
