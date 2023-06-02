@@ -46,7 +46,7 @@
 
     <div class="nav-bottom">
         <ul class="list-navbar">
-            <li><a href="#">
+            <li><a href="/confirm">
                     <span class="nav-icon">
                         <i class="fa-solid fa-user"></i>
                     </span>

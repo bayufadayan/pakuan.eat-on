@@ -167,6 +167,7 @@ nav.active .nav-text {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     gap: 2rem;
+    justify-items: center;
 }
 
 .dashboardcard-container {
@@ -564,15 +565,22 @@ nav.active .nav-text {
     margin-left: 1rem;
     order: 1;
 }
-.cart-header-text h1{
+
+.cart-header-text h1 {
     font-size: 2rem;
     font-weight: bold;
 }
+
+.tambah-pesanan::after{
+    content: "+ tambah pesanan";
+}
+
 .cart-header-button {
     order: 2;
     margin-right: 1rem;
 }
-.cart-header-button button{
+
+.cart-header-button button {
     background-color: #897FBE;
     color: #000;
     padding: 0.5rem 1rem;
@@ -582,61 +590,64 @@ nav.active .nav-text {
     border: none;
     letter-spacing: 1px;
 }
-.cart-header-button button:hover{
+
+.cart-header-button button:hover {
     background-color: #655784;
     color: #fff;
 }
 
 .cart-content {
-    
+
     background-color: #FFFBD9;
     padding: 1rem 2rem 1rem 2rem;
 }
-.resto-name {
-    margin-left: 1rem;
 
+.resto-name {
+    margin-left: 1.55rem;
 }
-.resto-name h3{
+
+.resto-name h3 {
     font-weight: 1rem;
 }
 
-.resto-menu-container{
+.resto-menu-container {
     font-weight: 500;
     position: relative;
     display: flex;
     justify-content: space-between;
 }
 
-.resto-menu-left{
+.resto-menu-left {
     position: relative;
     display: block;
     width: 50%;
     order: 1;
 }
 
-.resto-menu-name{
+.resto-menu-name {
     position: relative;
     display: flex;
     align-items: center;
     font-weight: bold;
 }
-.resto-menu-name [type="checkbox"]{
+
+.resto-menu-name [type="checkbox"] {
     margin-right: 1rem;
     transform: scale(1.7);
 }
 
-.notes-icon{
+.notes-icon {
     position: relative;
     display: flex;
     align-items: center;
     padding-left: 2rem;
 }
 
-.notes-icon i{
+.notes-icon i {
     margin-right: 0.3rem;
 }
 
-.cart-notes input{
+.cart-notes input {
     background-color: #D9D9D9;
     position: relative;
     display: flex;
@@ -650,11 +661,12 @@ nav.active .nav-text {
     padding: 0.2rem 1rem;
     width: 25%;
 }
+
 .cart-notes input[type="text"]::placeholder {
     font-size: small;
 }
 
-.resto-menu-right{
+.resto-menu-right {
     position: relative;
     display: flex;
     order: 2;
@@ -663,20 +675,58 @@ nav.active .nav-text {
     align-items: center;
     padding-right: 3rem;
 }
-.item-count{
+
+.item-count {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     font-size: xx-large;
 }
-.item-count i{
+
+.item-count i {
     margin: 0rem 0.5rem;
 }
-.total-price{
+
+.total-price {
     font-size: x-large;
 }
 
+.cart-order-button{
+    background: #fff;
+    width: calc(100% - 80px);
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    height: 15vh;
+    align-items: center;
+}
+
+.cart-order-button a{
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    width: 60%;
+}
+
+.cart-order-button button{
+    width: 100%;
+    background-color: #907cbc;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: large;
+    padding: 0.5rem 0rem;
+    color: #000;
+
+}
+.cart-order-button button:hover{
+    background-color: #655784;
+    color: #fff;
+}
+
+/* Confirm Order Page */
 
 /* Uk. Hp dan tablet*/
 @media only screen and (max-width: 915px) {
@@ -692,14 +742,16 @@ nav.active .nav-text {
         justify-content: center;
     }
 
-    .cart-notes input{
+    /* Cart Page */
+    .cart-notes input {
         width: 50%;
     }
 
-    .resto-menu-left{
+    .resto-menu-left {
         order: 0;
     }
-    .resto-menu-right{
+
+    .resto-menu-right {
         align-items: center;
         padding-right: 0;
         order: 0;
@@ -708,31 +760,48 @@ nav.active .nav-text {
         margin-top: 0.5rem;
     }
 
-    .resto-menu-container{
+    .resto-menu-container {
         font-weight: 500;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: flex-end;
     }
+    /* cart page */
+    .cart-order-button a{
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 630px) {
-    .resto-menu-right{
+
+    /* Cart Page */
+    .tambah-pesanan::after{
+        color: white;
+        content: "+";
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .resto-menu-right {
         justify-content: center;
     }
-    .resto-menu-left{
+
+    .resto-menu-left {
         width: 100%;
     }
-    .resto-menu-container{
+
+    .resto-menu-container {
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-    .item-count{
+
+    .item-count {
         font-size: large;
     }
-    .total-price{
+
+    .total-price {
         font-size: large;
     }
 }
