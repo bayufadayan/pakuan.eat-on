@@ -32,7 +32,7 @@
                         Favorit
                     </span>
                 </a></li>
-            <li><a href="#">
+            <li><a href="/cart">
                     <span class="nav-icon">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </span>
