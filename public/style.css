@@ -571,7 +571,7 @@ nav.active .nav-text {
     font-weight: bold;
 }
 
-.tambah-pesanan::after{
+.tambah-pesanan::after {
     content: "+ tambah pesanan";
 }
 
@@ -692,7 +692,7 @@ nav.active .nav-text {
     font-size: x-large;
 }
 
-.cart-order-button{
+.cart-order-button {
     background: #fff;
     width: calc(100% - 80px);
     position: fixed;
@@ -701,16 +701,17 @@ nav.active .nav-text {
     justify-content: center;
     height: 15vh;
     align-items: center;
+    box-shadow: 9px -2vh 20px 0 rgb(0, 0, 0, 0.1);
 }
 
-.cart-order-button a{
+.cart-order-button a {
     position: relative;
     display: flex;
     text-decoration: none;
     width: 60%;
 }
 
-.cart-order-button button{
+.cart-order-button button {
     width: 100%;
     background-color: #907cbc;
     border: none;
@@ -721,12 +722,166 @@ nav.active .nav-text {
     color: #000;
 
 }
-.cart-order-button button:hover{
+
+.cart-order-button button:hover {
     background-color: #655784;
     color: #fff;
 }
 
 /* Confirm Order Page */
+.confirm-box{
+    position: relative;
+    display: flex;
+    width: 95%;
+    padding-left: 1rem;
+}
+
+.confirm-left-container{
+    width: 45%;
+    height: 100%;
+}
+
+.confirm-right-container{
+    width: 45%;
+    height: 100%;
+    margin-left: 3rem;
+}
+
+.confirm-sub-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    border-radius: 2vh;
+    margin-bottom: 2rem;
+}
+
+.confirm-sub-header {
+    position: relative;
+    display: flex;
+    background: #FFF7EE;
+    width: 100%;
+    justify-content: start;
+    margin-bottom: 0.5rem;
+    border-radius: 2vh;
+}
+
+.confirm-sub-header h3 {
+    position: relative;
+    background: #FFE3C4;
+    font-size: x-large;
+    padding: 0.3rem 3rem;
+    border-radius: 2vh;
+    margin: 0;
+}
+
+.confirm-sub-content {
+    background: #E1DCFF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 2vh;
+}
+
+.confirm-input-choice {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.confirm-input-choice label {
+    margin-left: 1rem;
+    font-size: medium;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.confirm-input-choice input[type="radio"] {
+    transform: scale(1.7);
+}
+
+#conf-order {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.fixed-order-detail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    width: 75%;
+}
+
+.fixed-order-detail-name {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.fixed-order-detail-price {
+    display: flex;
+    width: 30vh;
+    justify-content: start;
+}
+
+.fixed-order-detail-notes {
+    display: flex;
+    background: white;
+    border-radius: 10vh;
+    padding-left: 1rem;
+    width: 95%;
+    margin-top: auto;
+}
+
+.fixed-order-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    border-radius: 2vh;
+    /* border: 2px solid black; */
+}
+
+.fixed-order-image #img-layout {
+    width: 115px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 1vh;
+}
+
+.fixed-order-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.fixed-order-image div {
+    text-align: center;
+    font-weight: bold;
+    align-items: flex-end;
+}
+
+.button-order-now{
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 7vh;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 30vh;
+    background: #897FBE;
+}
+
+.button-order-now:hover{
+    background-color: #655784;
+    color: #fff;
+}
 
 /* Uk. Hp dan tablet*/
 @media only screen and (max-width: 915px) {
@@ -767,16 +922,40 @@ nav.active .nav-text {
         align-items: center;
         justify-content: flex-end;
     }
+
     /* cart page */
-    .cart-order-button a{
+    .cart-order-button a {
         width: 80%;
+    }
+
+    /* Confirm Page */
+    .confirm-box{
+        flex-direction: column;
+    }
+
+    .confirm-left-container{
+        width: 95%;
+        height: 100%;
+    }
+    
+    .confirm-right-container{
+        width: 95%;
+        height: 100%;
+        margin-left: 0rem;
+    }
+    .confirm-sub-header h3{
+        font-size: large;
+    }
+
+    .fixed-order-detail-name{
+        font-size: large;
     }
 }
 
 @media only screen and (max-width: 630px) {
 
     /* Cart Page */
-    .tambah-pesanan::after{
+    .tambah-pesanan::after {
         color: white;
         content: "+";
         font-size: 20px;
@@ -804,4 +983,19 @@ nav.active .nav-text {
     .total-price {
         font-size: large;
     }
+
+    /* confirm page */
+    .fixed-order-detail-notes{
+        font-size: small;
+    }
+
+    .fixed-order-image #img-layout {
+        width: 55px;
+        height: 50px;
+    }
+
+    .fixed-order-image div{
+        font-size: small;
+    }
+
 }
