@@ -1,4 +1,4 @@
-<nav>
+<nav class="mynav">
     <div class="nav-logo">
         <span>
             <img src="assets/Logobar.png" alt="logo-pakuan-eaton" class="logo-image">
@@ -62,14 +62,26 @@
                         About Us
                     </span>
                 </a></li>
-            <li><a href="/login">
+            <li class="mylogout">
+                <form action="/logout" method="post">
+                    @csrf
+                    <button type="submit" class="nav-icon mylogout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <div class="nav-text text-logout">
+                            Log Out
+                        </div>
+                    </button>
+                </form>
+
+                {{-- <a href="/login">
                     <span class="nav-icon">
                         <i class="fa-solid fa-right-from-bracket"></i>
                     </span>
                     <span class="nav-text">
                         Log Out
                     </span>
-                </a></li>
+                </a> --}}
+            </li>
 
         </ul>
     </div>

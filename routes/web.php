@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RegistController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,21 +15,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('dashboard');
+Route::get('/admin', function () {
+    return view('admin.layouts.main-admin');
 });
+
 
 Route::get('/searchpage', function () {
     return view('searchpage');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/signup', function () {
-    return view('signup');
 });
 
 Route::get('/terlaris', function () {
@@ -63,3 +58,14 @@ Route::get('/cart', function () {
 Route::get('/confirm', function () {
     return view('confirmorder');
 });
+
+
+Route::get('/signup', [RegistController::class, 'index'])->middleware('guest');
+Route::post('/signup', [RegistController::class, 'store']);
+
+
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
