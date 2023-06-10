@@ -8,7 +8,7 @@
 }
 
 /***************** navbar Decoration *****************/
-nav {
+.mynav {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,16 +19,16 @@ nav {
     transition: all 0.5s ease;
 }
 
-nav.active~.main-content {
+.mynav.active~.main-content {
     left: 250px;
     width: calc(100% - 250px);
 }
 
-nav.active {
+.mynav.active {
     width: 250px;
 }
 
-nav #btn {
+.mynav #btn {
     position: absolute;
     color: #493f5a;
     top: .7rem;
@@ -39,7 +39,7 @@ nav #btn {
     cursor: pointer;
 }
 
-nav.active #btn {
+.mynav.active #btn {
     color: #907fb2;
     left: 85%;
     transform: rotate(180deg);
@@ -62,30 +62,32 @@ nav.active #btn {
     width: 200px;
 }
 
-nav .logo-image {
+.mynav .logo-image {
     transition: all 0.2s ease;
     opacity: 0;
 }
 
-nav.active .logo-image {
+.mynav.active .logo-image {
     transition: all 0.7s ease;
     opacity: 1;
 }
 
-nav.active .nav-logo {
+.mynav.active .nav-logo {
     transition: all 0.7s ease;
     width: calc(100% + 5px);
 }
+
+
 
 .nav-icon {
     font-size: 20px;
 }
 
-nav ul {
+.mynav ul {
     padding: 0;
 }
 
-nav ul li {
+.mynav ul li {
     position: relative;
     list-style-type: none;
     height: 50px;
@@ -93,7 +95,7 @@ nav ul li {
     line-height: 50px;
 }
 
-nav ul li a {
+.mynav ul li a {
     position: fixed;
     color: #493f5a;
     display: flex;
@@ -102,34 +104,60 @@ nav ul li a {
     border-radius: 0.8rem;
 }
 
+.mylogout{
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    margin: 0.8rem auto;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+}
+.mynav ul li button{
+    align-items: center;
+    color: #493f5a;
+    border: none;
+    display: flex;
+    background: transparent;
+    border-radius: 0.8rem;
+}
+
+.mynav ul li form{
+    position: fixed;
+}
+
 /* .nav-bottom{
     position: fixed;
     bottom: 0;
 } */
 
-nav ul li:hover {
+.mynav ul li:hover {
     background-color: #f0f6fa;
     border-radius: 9px;
 }
 
-nav ul li i {
+.mynav ul li i {
     min-width: 50px;
     text-align: center;
     border-radius: 12px;
     line-height: 50px;
 }
 
-nav .nav-text {
+.mynav .nav-text{
     font-size: 17px;
     display: none;
     transition: all 2s ease;
 }
 
-nav.active .nav-text {
+.mynav.active .nav-text{
     display: flex;
     transition: all 0.9s ease;
 }
 
+.mynav form {
+    display: flex;
+    flex-direction: row;
+}
 /***************** Main Content *****************/
 .main-content {
     position: relative;
@@ -374,7 +402,7 @@ nav.active .nav-text {
     color: #483e5e;
 }
 
-.login-container button {
+.login-container .login-button, .signup-button {
     width: 100%;
     background-color: #907cbc;
     color: #fff;
@@ -385,7 +413,7 @@ nav.active .nav-text {
     font-size: large;
 }
 
-.login-container button:hover {
+.login-container .login-button:hover, .signup-button:hover {
     background-color: #655784;
     color: #fff;
 }
@@ -881,6 +909,23 @@ nav.active .nav-text {
 .button-order-now:hover{
     background-color: #655784;
     color: #fff;
+}
+
+/* ******** ADMIN ******** */
+
+
+.admin-logo{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.admin-search {
+    position: fixed;
+    display: flex;
+    right: 0;
 }
 
 /* Uk. Hp dan tablet*/
