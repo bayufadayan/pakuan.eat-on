@@ -1,23 +1,27 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand admin-logo" href="#">admin page</a>
+        <a class="navbar-brand admin-logo" href="/admin">admin page</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="nav nav-underline">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
+                  <a class="nav-link" aria-current="page" href="/">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">User Settings</a>
+                    <a class="nav-link" href="/admin/user-settings">User Settings</a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="#">Resto Settings</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Item Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">History Pemesanan</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -41,10 +45,10 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex admin-search" role="search">
+            {{-- <form class="d-flex admin-search" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form> --}}
         </div>
     </div>
 </nav>

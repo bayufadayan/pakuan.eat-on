@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\RegistController;
-use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegistController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/admin', function () {
-    return view('admin.layouts.main-admin');
-});
 
+Route::prefix('admin')->group(function () {
+    Route::get('/', [AdminController::class, 'index'])->middleware(['auth:sanctum', 'admin']);
+    Route::prefix('user-settings')->group(function () {
+        Route::get('/', [UserController::class, 'index']);
+        Route::get('add-user', [UserController::class, 'add_user']);
+        Route::post('add-user', [UserController::class, 'insert_data']);
+        Route::get('edit-user/{id}', [UserController::class, 'edit_user']);
+        Route::post('edit-user/{id}', [UserController::class, 'update_user']);
+        Route::get('delete-user/{id}', [UserController::class, 'delete_user']);
+    });
+});
 
 Route::get('/searchpage', function () {
     return view('searchpage');
