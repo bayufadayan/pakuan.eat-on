@@ -1,4 +1,4 @@
-@extends('layouts.mainlayout')
+{{-- @extends('layouts.mainlayout')
 
 @section('title-mainpage')
 <i class="fa-solid fa-wallet"></i> HEMAT DOMPET
@@ -10,4 +10,5 @@
             @include('components.card')
         @endfor
     </div>
-@endsection
+@endsection --}}
+<p>none</p>

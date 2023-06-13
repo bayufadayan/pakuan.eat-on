@@ -8,6 +8,16 @@
 
     <div class="nav-menu">
         <ul class="list-navbar">
+            @if (auth()->user()->role == 'ADMIN')
+                <li><a href="/admin">
+                        <span class="nav-icon" style="color: brown">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <span class="nav-text" style="color: brown">
+                            Admin Area
+                        </span>
+                    </a></li>
+            @endif
             <li><a href="/searchpage">
                     <span class="nav-icon">
                         <i class="fa-solid fa-magnifying-glass" id="navsrch"></i>
@@ -46,14 +56,17 @@
 
     <div class="nav-bottom">
         <ul class="list-navbar">
-            <li><a href="/confirm">
-                    <span class="nav-icon">
-                        <i class="fa-solid fa-user"></i>
-                    </span>
-                    <span class="nav-text">
-                        My Account
-                    </span>
-                </a></li>
+            @if (auth()->user()->role == 'USER')
+                <li><a href="/confirm">
+                        <span class="nav-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <span class="nav-text">
+                            My Account
+                        </span>
+                    </a></li>
+            @endif
+
             <li><a href="#">
                     <span class="nav-icon">
                         <i class="fa-sharp fa-solid fa-circle-info"></i>
