@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Resto;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreRestoRequest;
 use App\Http\Requests\UpdateRestoRequest;
 
@@ -11,56 +12,65 @@ class RestoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if ($request->has('search')) {
+            $data = Resto::where('name', 'LIKE', '%' . $request->search . '%')->paginate(5);
+        } else {
+            $data = Resto::paginate(5);
+        }
+
+        $searchNotFound = null;
+        if ($data->isEmpty()) {
+            $searchNotFound = "Pencarian tidak ditemukan";
+        }
+
+        return view('admin.resto-settings', compact('data', 'searchNotFound'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function edit_resto($id)
     {
-        //
+        $data = Resto::find($id);
+
+        return view('admin.edit-resto', compact('data'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreRestoRequest $request)
+    public function update_resto(Request $request, $id)
     {
-        //
+        $data = Resto::find($id);
+        $validatedData = $request->validate([
+            'name' => 'required|min:4|max:255',
+        ]);
+
+        try {
+            $data->update($validatedData);
+        } catch (\Illuminate\Database\QueryException $exception) {
+            return redirect()->back()->with('error', 'Gagal update data! Nama Resto sudah dimiliki yang lain');
+        }
+
+        return redirect('/admin/resto-settings')->with('success', 'Data with ID ' . $id . ' edited successfully');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Resto $resto)
+    public function add_resto()
     {
-        //
+        return view('admin.add-resto');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Resto $resto)
+    public function insert_resto(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|unique:restos|min:4|max:255',
+        ]);
+        Resto::create($validatedData);
+
+        return redirect('/admin/resto-settings')->with('success', 'Data added successfully');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateRestoRequest $request, Resto $resto)
+    public function delete_resto($id)
     {
-        //
-    }
+        $data = Resto::find($id);
+        $data->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Resto $resto)
-    {
-        //
+        return redirect('/admin/resto-settings')->with('success', 'Data with ID ' . $id . ' deleted successfully');
     }
 }

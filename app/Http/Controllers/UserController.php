@@ -8,11 +8,23 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data = User::all();
-        return view('admin.user-settings', compact('data'));
+        if ($request->has('search')) {
+            $data = User::where('username', 'LIKE', '%' . $request->search . '%')
+                ->orWhere('email', 'LIKE', '%' . $request->search . '%')->paginate(5);
+        } else {
+            $data = User::paginate(5);
+        }
+
+        $searchNotFound = null;
+        if ($data->isEmpty()) {
+            $searchNotFound = "Pencarian tidak ditemukan";
+        }
+
+        return view('admin.user-settings', compact('data', 'searchNotFound'));
     }
+
 
     public function add_user()
     {
@@ -39,7 +51,7 @@ class UserController extends Controller
     public function edit_user($id)
     {
         $data = User::find($id);
-        
+
         return view('admin.edit-user', compact('data'));
     }
 
@@ -51,9 +63,14 @@ class UserController extends Controller
             'username' => 'required|min:4|max:255',
             'role' => 'required|in:ADMIN,USER',
         ]);
-        $data->update($validatedData);
 
-        return redirect('/admin/user-settings')->with('success', 'Data with ID '.$id. ' edited successfully');
+        try {
+            $data->update($validatedData);
+        } catch (\Illuminate\Database\QueryException $exception) {
+            return redirect()->back()->with('error', 'Gagal update data! Email atau username telah dimiliki yang lain');
+        }
+
+        return redirect('/admin/user-settings')->with('success', 'Data with ID ' . $id . ' edited successfully');
     }
 
     public function delete_user($id)
@@ -61,6 +78,6 @@ class UserController extends Controller
         $data = User::find($id);
         $data->delete();
 
-        return redirect('/admin/user-settings')->with('success', 'Data with ID '.$id. ' deleted successfully');
+        return redirect('/admin/user-settings')->with('success', 'Data with ID ' . $id . ' deleted successfully');
     }
 }

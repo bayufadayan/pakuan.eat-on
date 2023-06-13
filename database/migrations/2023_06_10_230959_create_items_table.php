@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('categories');
+            $table->unsignedBigInteger('category');
             $table->integer('price');
             $table->text('description');
             $table->unsignedBigInteger('resto');
@@ -22,7 +22,7 @@ return new class extends Migration
         });
 
         Schema::table('items', function (Blueprint $table) {
-            $table->foreign('categories')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('category')->references('id')->on('categories')->onDelete('cascade');
             $table->foreign('resto')->references('id')->on('restos')->onDelete('cascade');
         });
     }

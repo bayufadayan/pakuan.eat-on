@@ -1,4 +1,4 @@
-@extends('layouts.mainlayout')
+{{-- @extends('layouts.mainlayout')
 
 @section('title-mainpage')
     <i class="fa-solid fa-medal"></i> Terlaris Makanan dan Minuman
@@ -10,4 +10,6 @@
             @include('components.card')
         @endfor
     </div>
-@endsection
+@endsection --}}
+
+<p>NONE</p>

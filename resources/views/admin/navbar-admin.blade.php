@@ -15,13 +15,13 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Resto Settings</a>
+                    <a class="nav-link" href="/admin/resto-settings">Resto Settings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Item Settings</a>
+                    <a class="nav-link" href="/admin/item-settings">Item Settings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">History Pemesanan</a>
+                    <a class="nav-link" href="#">Transaction</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

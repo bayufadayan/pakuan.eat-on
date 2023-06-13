@@ -1,12 +1,12 @@
 <div class="product-card">
     <img src="assets/product.png" alt="gtau ah">
     <div class="card-text">
-        <h3>Gimbab</h3>
-        <p>Gimbab adalah makanan nasi katsu dengan gulungan rumput laut yang gurih dan bermanfaan</p>
+        <h3>{{ $title }}</h3>
+        <p>{{ $desc }}</p>
     </div>
     <div class="card-pricerate">
         <div class="price">
-            5000
+            {{ $price }}
         </div>
         <div class="rate">
             <i class="fa-solid fa-star"></i> 5
