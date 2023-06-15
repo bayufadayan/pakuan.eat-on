@@ -1,5 +1,9 @@
 @extends('layouts.mainlayout')
 
+<?php 
+$title = "Dashboard"
+?>
+
 @section('card-appearance')
     <div class="dashboardcard-container">
         @include('components.dashboardcard')

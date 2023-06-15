@@ -1,5 +1,7 @@
 @extends('layouts.onlynavbar')
-
+<?php 
+$title = "About Us"
+?>
 @section('content')
     <div class="title-productpage container">
         <div class="mt-4 fs-2 fw-bold text-uppercase">

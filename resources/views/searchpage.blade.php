@@ -1,5 +1,9 @@
 @extends('layouts.onlynavbar')
 
+<?php 
+$title = "Search"
+?>
+
 @section('content')
     @include('components.searchbar')
 

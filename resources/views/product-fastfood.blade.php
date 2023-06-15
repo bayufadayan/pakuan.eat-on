@@ -1,5 +1,7 @@
 @extends('layouts.mainlayout')
-
+<?php 
+$title = "Fast Food"
+?>
 @section('title-mainpage')
     <i class="fa-solid fa-burger"></i> Fast Food
 @endsection

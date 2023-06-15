@@ -1,5 +1,7 @@
 @extends('layouts.mainlayout')
-
+<?php 
+$title = "Hemat Dompet"
+?>
 @section('title-mainpage')
     <i class="fa-solid fa-wallet"></i> HEMAT DOMPET
 @endsection

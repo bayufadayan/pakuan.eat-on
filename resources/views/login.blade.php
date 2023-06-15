@@ -1,5 +1,7 @@
 @extends('layouts.registlayout')
-
+<?php 
+$title = "Login"
+?>
 @section('login-text')
     <h1>Welcome Back,</h1>
     <p>Login now to continue</p>

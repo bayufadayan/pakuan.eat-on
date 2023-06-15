@@ -1,5 +1,7 @@
 @extends('layouts.onlynavbar')
-
+<?php 
+$title = "Cart"
+?>
 @section('content')
     <section class="cart-head">
         <div class="cart-header-text">

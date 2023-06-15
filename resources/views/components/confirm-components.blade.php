@@ -45,7 +45,7 @@
                 </div> --}}
             </div>
             <div class="fixed-order-image">
-                <div id="img-layout"><img src="/assets/confirm-order1.png" alt=""></div>
+                <div id="img-layout"><img src="/assets/confirm-ordern1.png" alt=""></div>
                 <div>Jumlah : 1</div>
             </div>
         </div>
