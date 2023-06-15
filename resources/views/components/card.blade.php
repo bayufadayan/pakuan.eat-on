@@ -13,9 +13,10 @@
         </div>
     </div>
     <div class="card-transaction">
-        <div class="order">
+        <a href="/transaction/{{ $id }}"
+            class="order text-decoration-none order d-flex justify-content-center hoverpesan">
             Pesan
-        </div>
+        </a>
         <div class="card-wa">
             <i class="fa-brands fa-whatsapp"></i>
         </div>

@@ -9,6 +9,7 @@
         @foreach ($data as $item)
             @if ($item->category === 3)
                 @include('components.card', [
+                    'id' => $item->id,
                     'title' => $item->name,
                     'desc' => $item->description,
                     'price' => $item->price,

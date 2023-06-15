@@ -9,6 +9,7 @@ use App\Http\Controllers\RegistController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,12 +52,11 @@ Route::prefix('admin')->group(function () {
 
             Route::get('delete-item/{id}', [ItemController::class, 'delete_item']);
         });
+        Route::get('/transaction-history', [DashboardController::class, 'view_history']);
     });
 });
 
-Route::get('/searchpage', function () {
-    return view('searchpage');
-});
+Route::get('/searchpage', [DashboardController::class, 'search_item']);
 
 Route::get('/terlaris', function () {
     return view('product-terlaris');
@@ -66,6 +66,10 @@ Route::get('/fastfood', [ItemController::class, 'ondashboard_fastfood']);
 
 Route::get('/hematdompet', function () {
     return view('product-hematdompet');
+});
+
+Route::get('/profil', function () {
+    return view('profil');
 });
 
 Route::get('/minuman', [ItemController::class, 'ondashboard_minum']);
@@ -81,9 +85,12 @@ Route::get('/favorite', function () {
 Route::get('/cart', function () {
     return view('cart');
 });
-Route::get('/confirm', function () {
-    return view('confirmorder');
+Route::get('/about', function () {
+    return view('about');
 });
+
+Route::get('transaction/{id}', [TransactionController::class, 'add_transaction'])->name('transaction.add');
+Route::post('transaction/{id}', [TransactionController::class, 'make_transaction'])->name('transaction.make');
 
 
 Route::get('/signup', [RegistController::class, 'index'])->middleware('guest');

@@ -18,7 +18,7 @@
                                     class="text-decoration-none text-black">Resto Settings</a></li>
                             <li class="list-group-item py-2 fs-5"><a href="/admin/item-settings"
                                     class="text-decoration-none text-black">Item Settings</a></li>
-                            <li class="list-group-item py-2 fs-5"><a href="#"
+                            <li class="list-group-item py-2 fs-5"><a href="/admin/transaction-history"
                                     class="text-decoration-none text-black">Transaction</a></li>
                             <li class="list-group-item badge text-bg-danger mt-4">
                                 <form action="/logout" method="post">

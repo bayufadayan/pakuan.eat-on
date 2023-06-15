@@ -5,9 +5,14 @@
 @endsection
 
 @section('card-appearance')
-    <div class="product-container">
-        @for ($i = 0; $i < 10; $i++)
-            @include('components.card')
-        @endfor
-    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        swal({
+            title: "Fitur masih dalam tahap pengembangan!",
+            text: "Klik OK untuk kembali ke Dashboard",
+            icon: "info",
+        }).then(function() {
+            window.location.href = "/";
+        });
+    </script>
 @endsection
