@@ -7,7 +7,8 @@
         </div>
     </section>
 
-    <section class="confirm-box">
+    <form action="{{ route('transaction.make', $item->id) }}" method="post" class="confirm-box">
+        @csrf
         @include('components.confirm-components')
-    </section>
+    </form>
 @endsection

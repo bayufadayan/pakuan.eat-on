@@ -21,7 +21,7 @@
                     <a class="nav-link" href="/admin/item-settings">Item Settings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Transaction</a>
+                    <a class="nav-link" href="/admin/transaction-history">Transaction</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

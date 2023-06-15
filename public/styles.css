@@ -329,6 +329,14 @@
     font-size: 2rem;
 }
 
+.hoverpesan{
+    color: #000;
+}
+
+.hoverpesan:hover{
+    color: #fff
+}
+
 /***************** SeacrhBar Decoration *****************/
 .search-bar {
     position: relative;

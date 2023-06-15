@@ -20,7 +20,7 @@
             <div class="col-auto">
                 <form action="/admin/item-settings" method="get">
                     <input type="search" id="inputPassword6" name="search" class="form-control"
-                        aria-labelledby="passwordHelpInline">
+                        aria-labelledby="passwordHelpInline" placeholder="search item name">
                 </form>
             </div>
         </div>

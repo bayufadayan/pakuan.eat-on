@@ -20,7 +20,7 @@
             <div class="col-auto">
                 <form action="/admin/resto-settings" method="get">
                     <input type="search" id="inputPassword6" name="search" class="form-control"
-                        aria-labelledby="passwordHelpInline">
+                        aria-labelledby="passwordHelpInline" placeholder="search resto name">
                 </form>
             </div>
         </div>

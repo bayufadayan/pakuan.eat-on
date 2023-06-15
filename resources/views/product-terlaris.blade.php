@@ -1,15 +1,18 @@
-{{-- @extends('layouts.mainlayout')
+@extends('layouts.mainlayout')
 
 @section('title-mainpage')
     <i class="fa-solid fa-medal"></i> Terlaris Makanan dan Minuman
 @endsection
 
 @section('card-appearance')
-    <div class="product-container">
-        @for ($i = 0; $i < 10; $i++)
-            @include('components.card')
-        @endfor
-    </div>
-@endsection --}}
-
-<p>NONE</p>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        swal({
+            title: "Fitur masih dalam tahap pengembangan!",
+            text: "Klik OK untuk kembali ke Dashboard",
+            icon: "info",
+        }).then(function() {
+            window.location.href = "/";
+        });
+    </script>
+@endsection

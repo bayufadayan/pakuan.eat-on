@@ -1,7 +1,7 @@
 <nav class="mynav">
     <div class="nav-logo">
         <span>
-            <img src="assets/Logobar.png" alt="logo-pakuan-eaton" class="logo-image">
+            <img src="/assets/Logobar.png" alt="logo-pakuan-eaton" class="logo-image">
         </span>
         <i class="fa-solid fa-angles-right" id="btn"></i>
     </div>
@@ -57,7 +57,7 @@
     <div class="nav-bottom">
         <ul class="list-navbar">
             @if (auth()->user()->role == 'USER')
-                <li><a href="/confirm">
+                <li><a href="/profil">
                         <span class="nav-icon">
                             <i class="fa-solid fa-user"></i>
                         </span>
@@ -67,7 +67,7 @@
                     </a></li>
             @endif
 
-            <li><a href="#">
+            <li><a href="/about">
                     <span class="nav-icon">
                         <i class="fa-sharp fa-solid fa-circle-info"></i>
                     </span>
@@ -85,15 +85,6 @@
                         </div>
                     </button>
                 </form>
-
-                {{-- <a href="/login">
-                    <span class="nav-icon">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                    </span>
-                    <span class="nav-text">
-                        Log Out
-                    </span>
-                </a> --}}
             </li>
 
         </ul>
