@@ -1,5 +1,9 @@
 @extends('layouts.mainlayout')
 
+<?php 
+$title = "Terlaris"
+?>
+
 @section('title-mainpage')
     <i class="fa-solid fa-medal"></i> Terlaris Makanan dan Minuman
 @endsection

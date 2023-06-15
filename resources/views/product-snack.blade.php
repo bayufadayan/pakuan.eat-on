@@ -1,5 +1,7 @@
 @extends('layouts.mainlayout')
-
+<?php 
+$title = "Snack"
+?>
 @section('title-mainpage')
     <i class="fa-solid fa-cookie-bite"></i> SnackS
 @endsection

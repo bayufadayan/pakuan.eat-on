@@ -1,5 +1,9 @@
 @extends('layouts.onlynavbar')
 
+<?php 
+$title = "Confirm Order"
+?>
+
 @section('content')
     <section class="cart-head">
         <div class="cart-header-text">

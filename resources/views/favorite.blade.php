@@ -1,5 +1,7 @@
 @extends('layouts.mainlayout')
-
+<?php 
+$title = "Favorit"
+?>
 @section('title-mainpage')
     <i class="fa-solid fa-heart"></i> Makanan yang disukai
 @endsection

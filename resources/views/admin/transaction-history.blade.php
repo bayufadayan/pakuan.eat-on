@@ -4,7 +4,7 @@
     <br><br><br>
     <div class="admin-page-title px-5 pt-5 pb-4">
         <a href="/admin/user-settings" style="color: black; text-decoration:none">
-            <p class="h3"><i class="fa-solid fa-user ps-5 pe-4"></i>Users Settings</p>
+            <p class="h3"><i class="fa-solid fa-newspaper ps-5 pe-4"></i>Transaction Histories</p>
         </a>
     </div>
     <div class="container">

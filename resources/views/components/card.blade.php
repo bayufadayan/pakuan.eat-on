@@ -1,5 +1,5 @@
 <div class="product-card">
-    <img src="assets/product.png" alt="gtau ah">
+    <img src="/assets/productn.png" alt="gtau ah">
     <div class="card-text">
         <h3>{{ $title }}</h3>
         <p>{{ $desc }}</p>

@@ -1,5 +1,7 @@
 @extends('layouts.mainlayout')
-
+<?php 
+$title = "Minuman"
+?>
 @section('title-mainpage')
     <i class="fa-solid fa-mug-saucer"></i> Aneka Minuman
 @endsection
