@@ -78,6 +78,9 @@ vendor/bin/phpunit
 
 **License**
 - Lisensi: sesuaikan sesuai kebijakan proyek (tidak disertakan secara default).
+ 
+**Public Demo**
+- Live demo: http://pakuan-eaton.free.nf/
 
 ---
 Jika mau, saya bisa: menambahkan bagian "Environment variables" terperinci, contoh data `.env`, atau menambahkan badge dan instruksi deploy. Mau dilanjutkan?
