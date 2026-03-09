@@ -2,17 +2,33 @@
 
 Aplikasi pemesanan makanan sederhana (Laravel) untuk demo dan pengembangan lokal.
 
-**Project**
-- **Deskripsi:**: Aplikasi marketplace/restoran sederhana built with Laravel.
-- **Stack:**: PHP (Laravel), MySQL, Node.js (Vite) for frontend assets.
+**License**: [MIT License](https://github.com/bayufadayan/pakuan.eat-on/blob/master/LICENSE)
+ 
+## Public Demo
+<p>
+  <a href="http://pakuan-eaton.free.nf/">
+    <img src="https://img.shields.io/badge/Visit-Pakuan_Eat_On-purple?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Demo Web"/>
+  </a>
+</p>
 
-**Requirements**
+## Requirements
 - **PHP:**: 8.0+
 - **Composer:**: latest
 - **Node.js & npm:**: 16+ / npm
 - **Database:**: MySQL atau MariaDB
 
-**Quick Setup**
+## Screenshots
+Berikut beberapa screenshot dari permainan:
+
+![screenshot1](public/assets/screenshots/1.png)
+![screenshot2](public/assets/screenshots/2.png)
+![screenshot3](public/assets/screenshots/4.png)
+![screenshot3](public/assets/screenshots/5.png)
+![screenshot3](public/assets/screenshots/6.png)
+![screenshot3](public/assets/screenshots/7.png)
+![screenshot3](public/assets/screenshots/8.png)
+
+## Quick Setup
 - **Install dependencies:**
 ```bash
 composer install
@@ -75,12 +91,3 @@ vendor/bin/phpunit
 
 **Contributing**
 - Fork the repo, buat branch feature, buka pull request. Jaga commit kecil dan deskriptif.
-
-**License**
-- Lisensi: sesuaikan sesuai kebijakan proyek (tidak disertakan secara default).
- 
-**Public Demo**
-- Live demo: http://pakuan-eaton.free.nf/
-
----
-Jika mau, saya bisa: menambahkan bagian "Environment variables" terperinci, contoh data `.env`, atau menambahkan badge dan instruksi deploy. Mau dilanjutkan?
